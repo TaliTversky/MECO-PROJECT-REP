@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mecoapp-dev-25515-authRole",
+      "UnauthRoleArn": "arn:aws:iam::654654566177:role/amplify-mecoapp-dev-25515-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::654654566177:role/amplify-mecoapp-dev-25515-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-mecoapp-dev-25515-deployment",
+      "UnauthRoleName": "amplify-mecoapp-dev-25515-unauthRole",
+      "StackName": "amplify-mecoapp-dev-25515",
+      "StackId": "arn:aws:cloudformation:eu-north-1:654654566177:stack/amplify-mecoapp-dev-25515/78e55550-2d6f-11ef-9f4e-0a6f6d943991",
+      "AmplifyAppId": "d34rgm3w7dyk4f"
+    },
+    "categories": {
+      "auth": {
+        "mecoapp0aa33dfe": {}
+      },
+      "storage": {
+        "mediastorage": {}
+      },
+      "api": {
+        "mecoapp": {}
+      }
+    }
+  }
+}
