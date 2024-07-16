@@ -8,9 +8,10 @@
 import * as React from "react";
 import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
 import { fetchByPath, getOverrideProps, validateField } from "./utils";
-import { API } from "aws-amplify";
+import { generateClient } from "aws-amplify/api";
 import { getSighting } from "../graphql/queries";
 import { updateSighting } from "../graphql/mutations";
+const client = generateClient();
 export default function SightingUpdateForm(props) {
   const {
     id: idProp,
@@ -116,7 +117,7 @@ export default function SightingUpdateForm(props) {
     const queryData = async () => {
       const record = idProp
         ? (
-            await API.graphql({
+            await client.graphql({
               query: getSighting.replaceAll("__typename", ""),
               variables: { id: idProp },
             })
@@ -230,7 +231,7 @@ export default function SightingUpdateForm(props) {
               modelFields[key] = null;
             }
           });
-          await API.graphql({
+          await client.graphql({
             query: updateSighting.replaceAll("__typename", ""),
             variables: {
               input: {

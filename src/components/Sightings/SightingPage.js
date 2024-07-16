@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/esm/Container";
 import SightingTable from "./SightingTable";
-import SightingForm from "./SightingForm";
+import SightingForm from "./SightingForm2";
 
 function SightingPage() {
     return (

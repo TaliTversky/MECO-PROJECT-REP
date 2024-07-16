@@ -102,7 +102,7 @@ function SightingForm() {
                 mediaURL,
                 mediaSource,
                 photographer,
-                media: key
+                media: ""
             }
             await client.graphql({query: mutations.createSighting, variables: {input: newForm}});
             setError('');
@@ -253,7 +253,7 @@ function SightingForm() {
         <Form.Control type="file" accept="image/png" onChange={evt => setMedia(evt.target.files[0])}/>
       </Form.Group>
       {error && <div className="alert alert-danger">{error}</div>} 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
       </Button>
     </Form>
